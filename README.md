@@ -1,7 +1,10 @@
 ****Real Queue Motivator****
 
 ![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/987f9688-4356-4f1d-8278-ec8f98a59a15)
-Why Use This Plugin?
+****Why Use This Plugin?****
+
+
+
 **1. Card Per Minute (CPM) Calculation:**
 Calculate how many tasks/cards are completed per minute, with results rounded to two decimal places.
 
