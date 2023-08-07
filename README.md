@@ -1,7 +1,8 @@
 ****Real Queue Motivator**** : **FlashCard Timer**
 
 
-![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/987f9688-4356-4f1d-8278-ec8f98a59a15)
+![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/4b4efe01-b670-4ec8-98eb-127e8100169f)
+
 ****Why Use This Plugin?****
 
 
