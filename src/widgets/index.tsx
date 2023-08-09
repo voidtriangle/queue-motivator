@@ -60,8 +60,8 @@ async function onActivate(plugin: ReactRNPlugin) {
         plugin.window.closeAllFloatingWidgets();
         await plugin.window.openFloatingWidget(
           "popup",
-          {top: -630, 
-          left :35},
+          {top: -850, 
+          left :150},
           "rn-queue__show-answer-btn",
           false
       );
