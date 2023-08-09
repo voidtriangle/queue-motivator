@@ -1,7 +1,8 @@
 ****Real Queue Motivator**** : **FlashCard Timer**
 
 
-![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/4b4efe01-b670-4ec8-98eb-127e8100169f)
+![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/ca180e42-33af-4f47-8e34-5487f392c230)
+
 
 ****Why Use This Plugin?****
 
@@ -16,6 +17,8 @@ Track the total number of cards reviewed, providing an overall picture of progre
 **3. Estimate Remaining Time:**
 Predict the time required to complete the remaining cards, displayed in hours, minutes, and seconds.
 
+**4. Time Spent on Current Deck:**
+Track Total Time spent on current deck.
 
 
 Installation & Usage
