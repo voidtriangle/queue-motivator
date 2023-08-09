@@ -12,7 +12,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     "popup",
     WidgetLocation.FloatingWidget,{
       dimensions :{
-        width:800,
+        width:950,
         height:"auto",
       },
     }    
@@ -29,6 +29,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     plugin.storage.setSession("cardPerMinute", 0);
     plugin.storage.setSession("remainingTime", 0);
     plugin.storage.setSession("totalCardsCompleted", 0);
+	plugin.storage.setSession("totalTimeSpent", 0);
     startTime = Date.now();
 
 
@@ -37,6 +38,7 @@ async function onActivate(plugin: ReactRNPlugin) {
       
       const cardPerMinute = parseFloat((totalCardsCompleted / (totalTimeSpent / 60)).toFixed(2));
 
+		
   // Calculate remaining time (in minutes) to complete the totalCardsInDeckRemain with cardPerMinute
       const remainingMinutes = totalCardsInDeckReamin / cardPerMinute;
 
@@ -45,18 +47,21 @@ async function onActivate(plugin: ReactRNPlugin) {
       const minutes = Math.floor(remainingMinutes % 60);
       const seconds = Math.floor((remainingMinutes * 60) % 60);
       const remainingTime = `${hours} Hour ${minutes} Min ${seconds} Sec`;
+	  
+	  
 
       plugin.storage.setSession("cardPerMinute", cardPerMinute);
       plugin.storage.setSession("remainingTime", remainingTime);
       plugin.storage.setSession("totalCardsCompleted", totalCardsCompleted);
+	  plugin.storage.setSession("totalTimeSpent", (totalTimeSpent/60).toFixed(2));
 
       setTimeout(async()=>{
         
-        plugin.window.closeFloatingWidget("popup");
+        plugin.window.closeAllFloatingWidgets();
         await plugin.window.openFloatingWidget(
           "popup",
-          {top: -455,
-          left :30},
+          {top: -630, 
+          left :35},
           "rn-queue__show-answer-btn",
           false
       );
@@ -71,7 +76,8 @@ async function onActivate(plugin: ReactRNPlugin) {
         var endTime = Date.now();
 
         var TimeDiff=(endTime - startTime) / 1000;
-        totalTimeSpent=totalTimeSpent+TimeDiff
+        totalTimeSpent=totalTimeSpent+TimeDiff;
+		startTime=endTime;
         
       } 
 
@@ -99,7 +105,7 @@ async function onActivate(plugin: ReactRNPlugin) {
 
   plugin.event.addListener(AppEvents.QueueExit,undefined, async(data) => {
 
-     plugin.window.closeFloatingWidget("popup");
+     plugin.window.closeAllFloatingWidgets();
   });
 
   
