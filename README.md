@@ -1,7 +1,8 @@
 ****Real Queue Motivator**** : **FlashCard Timer**
 
 
-![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/85532d5a-5028-4b61-9c36-e23da1214a44)
+![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/f1f09dfa-45d3-4430-8129-3e0dc74a1418)
+
 
 Note: After installation, the widget may not appear immediately. Please attempt 1-2 Queues. It takes a little time to load on the first instance, but after that, it should display without any issues.
 
