@@ -3,7 +3,7 @@
 
 ![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/85532d5a-5028-4b61-9c36-e23da1214a44)
 
-
+Note: After installation, the widget may not appear immediately. Please attempt 1-2 Queues. It takes a little time to load on the first instance, but after that, it should display without any issues.
 
 ****Why Use This Plugin?****
 
@@ -23,10 +23,7 @@ Track Total Time spent on current deck.
 
 
 Installation & Usage
-Detailed installation and usage instructions can be found in the provided documentation.
+Remnote Store
 
-
-
-
-Usage
-Install from RemNote Store.
+Support:
+For any issues or feature requests, please raise issue in github.
