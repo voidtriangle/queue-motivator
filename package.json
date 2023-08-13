@@ -12,7 +12,8 @@
   "dependencies": {
     "@remnote/plugin-sdk": "^0.0.30",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-spring": "^9.7.2"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",

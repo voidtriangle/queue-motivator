@@ -1,10 +1,7 @@
 ****Real Queue Motivator**** : **FlashCard Timer**
 
 
-![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/f1f09dfa-45d3-4430-8129-3e0dc74a1418)
-
-
-Note: After installation, the widget may not appear immediately. Please attempt 1-2 Queues. It takes a little time to load on the first instance, but after that, it should display without any issues.
+![image](https://github.com/voidtriangle/queue-motivator/assets/107706537/4b4efe01-b670-4ec8-98eb-127e8100169f)
 
 ****Why Use This Plugin?****
 
@@ -19,12 +16,13 @@ Track the total number of cards reviewed, providing an overall picture of progre
 **3. Estimate Remaining Time:**
 Predict the time required to complete the remaining cards, displayed in hours, minutes, and seconds.
 
-**4. Time Spent on Current Deck:**
-Track Total Time spent on current deck.
 
 
 Installation & Usage
-Remnote Store
+Detailed installation and usage instructions can be found in the provided documentation.
 
-Support:
-For any issues or feature requests, please raise issue in github.
+
+
+
+Usage
+Install from RemNote Store.

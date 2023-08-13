@@ -1,15 +1,15 @@
 {
-  "author": "Pravven",
+  "author": "Praveen",
   "repoUrl": "https://github.com/voidtriangle/queue-motivator",
-  "name": "Flash Card Timer",
-  "description": "Flash Card Timer",
+  "name": "Queue Time Tracker",
+  "description": "Track and visualize your Remnote study metrics in real-time",
   "enableOnMobile": true,
   "id": "PraveenFlash-ul43bcq",
   "manifestVersion": 1,
   "version": {
     "major": 0,
-    "minor": 0,
-    "patch": 3
+    "minor": 1,
+    "patch": 7
   },
   "requestNative": false,
   "requiredScopes": [

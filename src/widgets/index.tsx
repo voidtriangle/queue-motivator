@@ -12,7 +12,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     "popup",
     WidgetLocation.FloatingWidget,{
       dimensions :{
-        width:950,
+        width:1020,
         height:"auto",
       },
     }    
@@ -43,26 +43,36 @@ async function onActivate(plugin: ReactRNPlugin) {
       const remainingMinutes = totalCardsInDeckReamin / cardPerMinute;
 
   // Convert remaining minutes to hours, minutes, and seconds
-      const hours = Math.floor(remainingMinutes / 60);
-      const minutes = Math.floor(remainingMinutes % 60);
-      const seconds = Math.floor((remainingMinutes * 60) % 60);
-      const remainingTime = `${hours} Hour ${minutes} Min ${seconds} Sec`;
+  const INF_SYMBOL = "∞";
+  var remainingTime="∞";
+
+  // Check if remainingMinutes is Infinity or close to it.
+  if (!isFinite(remainingMinutes)) {
+    const remainingTime = INF_SYMBOL;
+  } else {
+    const hours = Math.floor(remainingMinutes / 60);
+    const minutes = Math.floor(remainingMinutes % 60);
+    const seconds = Math.floor((remainingMinutes * 60) % 60);
+    remainingTime = `${hours} Hour ${minutes} Min ${seconds} Sec`;
+  }
 	  
 	  
 
       plugin.storage.setSession("cardPerMinute", cardPerMinute);
       plugin.storage.setSession("remainingTime", remainingTime);
       plugin.storage.setSession("totalCardsCompleted", totalCardsCompleted);
-	  plugin.storage.setSession("totalTimeSpent", (totalTimeSpent/60).toFixed(2));
+	    plugin.storage.setSession("totalTimeSpent", (totalTimeSpent/60).toFixed(2));
 
       setTimeout(async()=>{
         
-        plugin.window.closeAllFloatingWidgets();
+        
+         plugin.window.closeAllFloatingWidgets();
+
         await plugin.window.openFloatingWidget(
           "popup",
-          {top: -850, 
-          left :150},
-          "rn-queue__show-answer-btn",
+          {top: 25, 
+          left :-380},
+          "queue__badge",
           false
       );
         },25);
@@ -105,6 +115,7 @@ async function onActivate(plugin: ReactRNPlugin) {
 
   plugin.event.addListener(AppEvents.QueueExit,undefined, async(data) => {
 
+    
      plugin.window.closeAllFloatingWidgets();
   });
 
