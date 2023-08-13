@@ -12,7 +12,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     "popup",
     WidgetLocation.FloatingWidget,{
       dimensions :{
-        width:1020,
+        width:950,
         height:"auto",
       },
     }    
@@ -63,6 +63,7 @@ async function onActivate(plugin: ReactRNPlugin) {
       plugin.storage.setSession("totalCardsCompleted", totalCardsCompleted);
 	    plugin.storage.setSession("totalTimeSpent", (totalTimeSpent/60).toFixed(2));
 
+
       setTimeout(async()=>{
         
         
@@ -70,9 +71,9 @@ async function onActivate(plugin: ReactRNPlugin) {
 
         await plugin.window.openFloatingWidget(
           "popup",
-          {top: 25, 
-          left :-380},
-          "queue__badge",
+          {top: 55, 
+          left :0},
+          "rn-queue__top-bar",
           false
       );
         },25);
@@ -95,7 +96,7 @@ async function onActivate(plugin: ReactRNPlugin) {
    });
 
    plugin.event.addListener(AppEvents.QueueCompleteCard,undefined, async(data) => {
-    console.log("Enter Again");
+    
     if ((data.score as QueueInteractionScore)=== QueueInteractionScore.AGAIN){
       var totalCardsInDeckReamin = await plugin.queue.getNumRemainingCards(); 
       

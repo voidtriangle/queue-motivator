@@ -37,16 +37,18 @@ function popup() {
         transition: 'opacity 2s',
         borderRadius: '10px',
         overflow: 'hidden',       // This will ensure the rounding effect is visible
-        border: '0.2px solid gray'  // Just for visual check, remove if not needed
+        border: '0.2px solid gray',  // Just for visual check, remove if not needed
+		position: 'relative',
+		paddingLeft: '10px', 
     }}
 >
-      <div id="cards-per-minute" style={{ margin: '0 20px' }}>
+      <div id="cards-per-minute" style={{ margin: '0 5px' }}>
         Cards per minute: <span style={{ fontWeight: 'bold', color: cardPerMinuteColor }}>{cardPerMinute}</span> {renderArrow()}
       </div>
-      <div id="time-to-finish" style={{ margin: '0 20px' }}>
+      <div id="time-to-finish" style={{ margin: '0 5px' }}>
         Time to Finish: <span style={{ fontWeight: 'bold', color: 'lightgreen' }}>{remainingTime}</span>
       </div>
-      <div id="cards-reviewed" style={{ margin: '0 20px' }}>
+      <div id="cards-reviewed" style={{ margin: '0 5px' }}>
         Cards Reviewed: <span style={{ fontWeight: 'bold', color: 'lightgreen' }}>{totalCardsCompleted}</span>
       </div>
       <div id="time-spent" style={{ margin: '0 10px' }}>
